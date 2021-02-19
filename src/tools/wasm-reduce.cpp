@@ -1254,9 +1254,6 @@ int main(int argc, const char* argv[]) {
       // read and write it
       auto cmd = Path::getBinaryenBinaryTool("wasm-opt") + " " + input +
                  " -o " + test + " " + extraFlags;
-      if (!binary) {
-        cmd += " -S ";
-      }
       ProgramResult readWrite(cmd);
       if (readWrite.failed()) {
         stopIfNotForced("failed to read and write the binary", readWrite);
