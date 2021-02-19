@@ -1249,7 +1249,7 @@ int main(int argc, const char* argv[]) {
 
   if (binary) {
     std::cerr << "|checking that command has expected behavior on "
-                " canonicalized (read-written) binary\n";
+                 " canonicalized (read-written) binary\n";
     {
       // read and write it
       auto cmd = Path::getBinaryenBinaryTool("wasm-opt") + " " + input +
